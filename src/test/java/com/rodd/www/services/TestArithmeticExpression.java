@@ -20,17 +20,14 @@ public class TestArithmeticExpression {
     @Before
     public void testBefore() {
         contentList.add("3*0+3+8+9*1");
-        contentList.add(" 3+(3-0) * 2 ");
+        contentList.add(" 3+(3-1) * 2");
     }
 
     @Test
     public void test() {
         for (String content : contentList) {
             System.out.println("----------------------------------------------------");
-            System.out.println(ArithmeticExpressionNew.calculate(content));
             System.out.println(new ArithmeticExpression().calculate(content));
-            System.out.println("----------------------------------------------------");
-
         }
     }
 }
